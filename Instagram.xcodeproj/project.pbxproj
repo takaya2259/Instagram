@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		BA1669852AB9930B00407534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669842AB9930B00407534 /* AppDelegate.swift */; };
 		BA1669872AB9930B00407534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669862AB9930B00407534 /* SceneDelegate.swift */; };
-		BA1669892AB9930B00407534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669882AB9930B00407534 /* ViewController.swift */; };
 		BA16698C2AB9930B00407534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA16698A2AB9930B00407534 /* Main.storyboard */; };
 		BA16698E2AB9930D00407534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA16698D2AB9930D00407534 /* Assets.xcassets */; };
 		BA1669912AB9930D00407534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA16698F2AB9930D00407534 /* LaunchScreen.storyboard */; };
@@ -18,13 +17,13 @@
 		BA16699D2AB9936A00407534 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16699C2AB9936A00407534 /* ImageSelectViewController.swift */; };
 		BA16699F2AB9937B00407534 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA16699E2AB9937B00407534 /* PostViewController.swift */; };
 		BA1669A12AB9938C00407534 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669A02AB9938C00407534 /* SettingViewController.swift */; };
+		BA1669A32ABA883A00407534 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669A22ABA883A00407534 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BA1669812AB9930B00407534 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA1669842AB9930B00407534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA1669862AB9930B00407534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BA1669882AB9930B00407534 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BA16698B2AB9930B00407534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA16698D2AB9930D00407534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA1669902AB9930D00407534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		BA16699C2AB9936A00407534 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		BA16699E2AB9937B00407534 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		BA1669A02AB9938C00407534 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		BA1669A22ABA883A00407534 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +68,12 @@
 			children = (
 				BA1669842AB9930B00407534 /* AppDelegate.swift */,
 				BA1669862AB9930B00407534 /* SceneDelegate.swift */,
-				BA1669882AB9930B00407534 /* ViewController.swift */,
 				BA1669982AB9933D00407534 /* LoginViewController.swift */,
 				BA16699A2AB9935200407534 /* HomeViewController.swift */,
 				BA16699C2AB9936A00407534 /* ImageSelectViewController.swift */,
 				BA16699E2AB9937B00407534 /* PostViewController.swift */,
 				BA1669A02AB9938C00407534 /* SettingViewController.swift */,
+				BA1669A22ABA883A00407534 /* TabBarController.swift */,
 				BA16698A2AB9930B00407534 /* Main.storyboard */,
 				BA16698D2AB9930D00407534 /* Assets.xcassets */,
 				BA16698F2AB9930D00407534 /* LaunchScreen.storyboard */,
@@ -154,11 +154,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA16699D2AB9936A00407534 /* ImageSelectViewController.swift in Sources */,
+				BA1669A32ABA883A00407534 /* TabBarController.swift in Sources */,
 				BA16699B2AB9935200407534 /* HomeViewController.swift in Sources */,
 				BA16699F2AB9937B00407534 /* PostViewController.swift in Sources */,
 				BA1669A12AB9938C00407534 /* SettingViewController.swift in Sources */,
 				BA1669992AB9933D00407534 /* LoginViewController.swift in Sources */,
-				BA1669892AB9930B00407534 /* ViewController.swift in Sources */,
 				BA1669852AB9930B00407534 /* AppDelegate.swift in Sources */,
 				BA1669872AB9930B00407534 /* SceneDelegate.swift in Sources */,
 			);
