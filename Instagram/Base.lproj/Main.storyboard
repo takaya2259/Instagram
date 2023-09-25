@@ -43,7 +43,7 @@
         <!--Post View Controller-->
         <scene sceneID="Yft-Zy-kxl">
             <objects>
-                <viewController storyboardIdentifier="Post" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oq6-Zz-E5J" customClass="PostViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Post" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oq6-Zz-E5J" customClass="PostViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYe-gh-q5U">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
         <!--設定-->
         <scene sceneID="hJE-17-uHr">
             <objects>
-                <viewController storyboardIdentifier="Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eJf-Jx-Mjg" customClass="SettingViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eJf-Jx-Mjg" customClass="SettingViewConroller" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bsu-ca-DKe" customClass="SettingViewController" customModule="Instagram" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,13 +74,78 @@
         <!--Login View Controller-->
         <scene sceneID="8ao-xb-9bK">
             <objects>
-                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z6O-3F-hzh" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z6O-3F-hzh" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fJ-UM-GFc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="メールアドレス" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MMB-0e-7P7">
+                                <rect key="frame" x="46.666666666666657" y="139" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="FiH-gG-K7V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="パスワード" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VKJ-1U-V8F">
+                                <rect key="frame" x="46.666666666666657" y="183" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="hx2-uu-7UD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="アカウント作成時は表示名を入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wei-JS-FIV">
+                                <rect key="frame" x="46.666666666666657" y="227" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="VXf-uk-ndt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ya-06-9Y5">
+                                <rect key="frame" x="46.666666666666657" y="271" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="uYF-k4-77U"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ログイン" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLoginButton:" destination="z6O-3F-hzh" eventType="touchUpInside" id="pKV-LK-LUN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnu-AA-fmj">
+                                <rect key="frame" x="46.666666666666657" y="321" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="kv0-3e-uBo"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="アカウント作成" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCreateAccountButton:" destination="z6O-3F-hzh" eventType="touchUpInside" id="cgp-As-lf0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kSD-g8-fHk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wei-JS-FIV" firstAttribute="top" secondItem="VKJ-1U-V8F" secondAttribute="bottom" constant="10" id="3Ff-QI-4Jr"/>
+                            <constraint firstItem="VKJ-1U-V8F" firstAttribute="centerX" secondItem="9fJ-UM-GFc" secondAttribute="centerX" id="Oeg-4g-pB2"/>
+                            <constraint firstItem="8ya-06-9Y5" firstAttribute="top" secondItem="wei-JS-FIV" secondAttribute="bottom" constant="10" id="SuQ-lV-1Xg"/>
+                            <constraint firstItem="Qnu-AA-fmj" firstAttribute="top" secondItem="8ya-06-9Y5" secondAttribute="bottom" constant="10" id="V0d-C8-zpC"/>
+                            <constraint firstItem="VKJ-1U-V8F" firstAttribute="top" secondItem="MMB-0e-7P7" secondAttribute="bottom" constant="10" id="Y3a-rX-b2v"/>
+                            <constraint firstItem="wei-JS-FIV" firstAttribute="centerX" secondItem="9fJ-UM-GFc" secondAttribute="centerX" id="bnG-oW-pyX"/>
+                            <constraint firstItem="MMB-0e-7P7" firstAttribute="centerX" secondItem="9fJ-UM-GFc" secondAttribute="centerX" id="btg-oA-RlJ"/>
+                            <constraint firstItem="8ya-06-9Y5" firstAttribute="centerX" secondItem="9fJ-UM-GFc" secondAttribute="centerX" id="eJn-Pd-OAF"/>
+                            <constraint firstItem="Qnu-AA-fmj" firstAttribute="centerX" secondItem="9fJ-UM-GFc" secondAttribute="centerX" id="gXf-P2-6VL"/>
+                            <constraint firstItem="MMB-0e-7P7" firstAttribute="top" secondItem="kSD-g8-fHk" secondAttribute="top" constant="80" id="ghb-Pf-lOp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayNameTextField" destination="wei-JS-FIV" id="d46-TI-GLo"/>
+                        <outlet property="mailaddressTextField" destination="MMB-0e-7P7" id="Bqi-jq-IAq"/>
+                        <outlet property="passwordTextField" destination="VKJ-1U-V8F" id="t2D-P7-jAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iXp-aP-0T3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,6 +173,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn" width="300" height="40"/>
         <image name="camera" catalog="system" width="128" height="93"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="homekit" catalog="system" width="128" height="104"/>

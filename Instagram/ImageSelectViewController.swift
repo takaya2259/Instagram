@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
-class ImageSelectViewController {
+class ImageSelectViewController: UIViewController {
     
 }
