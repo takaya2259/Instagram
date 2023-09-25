@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class TabBarController: UITabBarController, UITabBarControllerDelegate {
 
@@ -22,6 +23,11 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         self.delegate = self
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    // タブバーのアイコンがタップされた時に呼ばれるdelegateメソッドを処理する
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
         if viewController is ImageSelectViewController {
             // ImageSelectViewControllerは、タブ切り替えではなくモーダル画面遷移する
