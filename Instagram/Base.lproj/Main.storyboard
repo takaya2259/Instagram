@@ -11,7 +11,7 @@
         <!--ホーム-->
         <scene sceneID="q72-gY-wRE">
             <objects>
-                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="skS-I8-Fda" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="skS-I8-Fda" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZwX-vZ-fxZ" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
         <!--投稿-->
         <scene sceneID="lqu-Ko-n6c">
             <objects>
-                <viewController storyboardIdentifier="ImageSelect" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cwg-SG-vOs" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelect" id="Cwg-SG-vOs" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jHj-ey-w2g" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,7 +43,7 @@
         <!--Post View Controller-->
         <scene sceneID="Yft-Zy-kxl">
             <objects>
-                <viewController storyboardIdentifier="Post" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Oq6-Zz-E5J" customClass="PostViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Post" id="Oq6-Zz-E5J" customClass="PostViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EYe-gh-q5U">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,12 +58,55 @@
         <!--設定-->
         <scene sceneID="hJE-17-uHr">
             <objects>
-                <viewController storyboardIdentifier="Setting" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eJf-Jx-Mjg" customClass="SettingViewConroller" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Setting" id="eJf-Jx-Mjg" customClass="SettingViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bsu-ca-DKe" customClass="SettingViewController" customModule="Instagram" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fee-Ki-Zh5">
+                                <rect key="frame" x="46.666666666666657" y="139" width="300" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Y2x-sx-6LZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPX-ho-hzF">
+                                <rect key="frame" x="46.666666666666657" y="183" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="mV8-c3-Iu9"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="表示名を変更" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleChangeButton:" destination="Bsu-ca-DKe" eventType="touchUpInside" id="3nX-gx-IJN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVw-S0-Iua">
+                                <rect key="frame" x="46.666666666666657" y="233" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="Ppz-e5-icR"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="ログアウト" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLogoutButton:" destination="Bsu-ca-DKe" eventType="touchUpInside" id="MWR-q2-mpM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lO6-PN-roq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dVw-S0-Iua" firstAttribute="top" secondItem="aPX-ho-hzF" secondAttribute="bottom" constant="10" id="17u-0w-luR"/>
+                            <constraint firstItem="Fee-Ki-Zh5" firstAttribute="centerX" secondItem="Bsu-ca-DKe" secondAttribute="centerX" id="DXA-6b-Dlv"/>
+                            <constraint firstItem="aPX-ho-hzF" firstAttribute="top" secondItem="Fee-Ki-Zh5" secondAttribute="bottom" constant="10" id="RJk-is-K5N"/>
+                            <constraint firstItem="Fee-Ki-Zh5" firstAttribute="top" secondItem="lO6-PN-roq" secondAttribute="top" constant="80" id="XVq-qg-A1L"/>
+                            <constraint firstItem="dVw-S0-Iua" firstAttribute="centerX" secondItem="Bsu-ca-DKe" secondAttribute="centerX" id="cB0-8z-ZsS"/>
+                            <constraint firstItem="aPX-ho-hzF" firstAttribute="centerX" secondItem="Bsu-ca-DKe" secondAttribute="centerX" id="z1D-MH-Z5j"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="displayNameTextField" destination="Fee-Ki-Zh5" id="0g7-HU-q1d"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="設定" image="gear" catalog="system" id="UWu-ZQ-B6n"/>
                 </viewController>
@@ -74,7 +117,7 @@
         <!--Login View Controller-->
         <scene sceneID="8ao-xb-9bK">
             <objects>
-                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="z6O-3F-hzh" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" modalPresentationStyle="fullScreen" id="z6O-3F-hzh" customClass="LoginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9fJ-UM-GFc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -162,9 +205,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="skS-I8-Fda" kind="relationship" relationship="viewControllers" id="TIA-Tu-gao"/>
-                        <segue destination="Cwg-SG-vOs" kind="relationship" relationship="viewControllers" id="jUu-3a-C2j"/>
-                        <segue destination="eJf-Jx-Mjg" kind="relationship" relationship="viewControllers" id="l19-iB-aLp"/>
+                        <segue destination="skS-I8-Fda" kind="relationship" relationship="viewControllers" id="6j5-zx-ce2"/>
+                        <segue destination="Cwg-SG-vOs" kind="relationship" relationship="viewControllers" id="23t-VJ-LnT"/>
+                        <segue destination="eJf-Jx-Mjg" kind="relationship" relationship="viewControllers" id="X1d-zZ-MpM"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xfG-SB-Hik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

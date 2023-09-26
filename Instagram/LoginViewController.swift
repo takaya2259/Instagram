@@ -5,9 +5,9 @@
 //  Created by 石森貴也 on 2023/09/19.
 //
 
-import Foundation
 import UIKit
 import FirebaseAuth
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -21,6 +21,31 @@ class LoginViewController: UIViewController {
     
     // ログインボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleLoginButton(_ sender: Any) {
+        if let address = mailaddressTextField.text, let password = passwordTextField.text {
+            
+            // アドレスとパスワード名のいずれかでも入力されていない時は何もしない
+            if address.isEmpty || password.isEmpty {
+                SVProgressHUD.showError(withStatus: "必要項目を入力してください")
+                return
+            }
+            
+            // HUDで処理中を表示
+            SVProgressHUD.show()
+            
+            Auth.auth().signIn(withEmail: address, password: password) { authResult, error in
+                if let error = error {
+                    print("DEBUG_PRINT: " + error.localizedDescription)
+                    return
+                }
+                print("DEBUG_PRINT: ログインに成功しました。")
+                
+                // HUDを消す
+                SVProgressHUD.dismiss()
+                
+                // 画面を閉じてタブ画面に戻る
+                self.dismiss(animated: true, completion: nil)
+            }
+         }
         
     }
     
@@ -33,6 +58,9 @@ class LoginViewController: UIViewController {
                 print("DEBUG_PRINT: 何かがから文字です。")
                 return
             }
+            
+            // HUDで処理中を表示
+            SVProgressHUD.show()
             
             // アドレスとパスワードでユーザー作成。ユーザー作成に成功すると、自動的にログインする
             Auth.auth().createUser(withEmail: address, password: password) { authResult, error in
@@ -55,6 +83,9 @@ class LoginViewController: UIViewController {
                             return
                         }
                         print("DEBUG_PRINT: [displayName = \(user.displayName!)]の設定に成功しました。")
+                        
+                        // HUDを消す
+                        SVProgressHUD.dismiss()
                         
                         // 画面を閉じてタブ画面に戻る
                         self.dismiss(animated: true, completion: nil)

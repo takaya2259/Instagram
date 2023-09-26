@@ -82,8 +82,8 @@
 				BA16699C2AB9936A00407534 /* ImageSelectViewController.swift */,
 				BA1669A62AC0F3B100407534 /* GoogleService-Info.plist */,
 				BA16699E2AB9937B00407534 /* PostViewController.swift */,
-				BA1669A02AB9938C00407534 /* SettingViewController.swift */,
 				BA1669A22ABA883A00407534 /* TabBarController.swift */,
+				BA1669A02AB9938C00407534 /* SettingViewController.swift */,
 				BA16698A2AB9930B00407534 /* Main.storyboard */,
 				BA16698D2AB9930D00407534 /* Assets.xcassets */,
 				BA16698F2AB9930D00407534 /* LaunchScreen.storyboard */,
@@ -106,7 +106,6 @@
 				AEEE5AD3CA294B6AB12E9DCE /* Pods-Instagram.debug.xcconfig */,
 				3EDE565B9D022FE931A60A54 /* Pods-Instagram.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
