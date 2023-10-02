@@ -20,6 +20,10 @@
 		BA1669A12AB9938C00407534 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669A02AB9938C00407534 /* SettingViewController.swift */; };
 		BA1669A32ABA883A00407534 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA1669A22ABA883A00407534 /* TabBarController.swift */; };
 		BA1669A72AC0F3B100407534 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA1669A62AC0F3B100407534 /* GoogleService-Info.plist */; };
+		BA9182BA2AC7C98D00D259F7 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9182B92AC7C98D00D259F7 /* Const.swift */; };
+		BA9182BC2AC7E90500D259F7 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9182BB2AC7E90500D259F7 /* PostData.swift */; };
+		BA9182BF2AC8112200D259F7 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9182BD2AC8112200D259F7 /* PostTableViewCell.swift */; };
+		BA9182C02AC8112200D259F7 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA9182BE2AC8112200D259F7 /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		BA1669A02AB9938C00407534 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		BA1669A22ABA883A00407534 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		BA1669A62AC0F3B100407534 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA9182B92AC7C98D00D259F7 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		BA9182BB2AC7E90500D259F7 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		BA9182BD2AC8112200D259F7 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		BA9182BE2AC8112200D259F7 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		CE728AF5F93AE4262D19BA0B /* Pods_Instagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Instagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -84,6 +92,10 @@
 				BA16699E2AB9937B00407534 /* PostViewController.swift */,
 				BA1669A22ABA883A00407534 /* TabBarController.swift */,
 				BA1669A02AB9938C00407534 /* SettingViewController.swift */,
+				BA9182B92AC7C98D00D259F7 /* Const.swift */,
+				BA9182BB2AC7E90500D259F7 /* PostData.swift */,
+				BA9182BD2AC8112200D259F7 /* PostTableViewCell.swift */,
+				BA9182BE2AC8112200D259F7 /* PostTableViewCell.xib */,
 				BA16698A2AB9930B00407534 /* Main.storyboard */,
 				BA16698D2AB9930D00407534 /* Assets.xcassets */,
 				BA16698F2AB9930D00407534 /* LaunchScreen.storyboard */,
@@ -170,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA1669912AB9930D00407534 /* LaunchScreen.storyboard in Resources */,
+				BA9182C02AC8112200D259F7 /* PostTableViewCell.xib in Resources */,
 				BA1669A72AC0F3B100407534 /* GoogleService-Info.plist in Resources */,
 				BA16698E2AB9930D00407534 /* Assets.xcassets in Resources */,
 				BA16698C2AB9930B00407534 /* Main.storyboard in Resources */,
@@ -225,14 +238,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9182BF2AC8112200D259F7 /* PostTableViewCell.swift in Sources */,
 				BA16699D2AB9936A00407534 /* ImageSelectViewController.swift in Sources */,
 				BA1669A32ABA883A00407534 /* TabBarController.swift in Sources */,
 				BA16699B2AB9935200407534 /* HomeViewController.swift in Sources */,
 				BA16699F2AB9937B00407534 /* PostViewController.swift in Sources */,
 				BA1669A12AB9938C00407534 /* SettingViewController.swift in Sources */,
+				BA9182BC2AC7E90500D259F7 /* PostData.swift in Sources */,
 				BA1669992AB9933D00407534 /* LoginViewController.swift in Sources */,
 				BA1669852AB9930B00407534 /* AppDelegate.swift in Sources */,
 				BA1669872AB9930B00407534 /* SceneDelegate.swift in Sources */,
+				BA9182BA2AC7C98D00D259F7 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
